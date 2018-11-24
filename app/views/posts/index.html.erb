@@ -1,12 +1,18 @@
 <h1>Posts Index</h1>
 <%= link_to 'Add post', new_post_path %>
 
-<ul>
+
   <% @posts.each do |post| %>
-    <li>
-      <p><%= post.book_title %></p>
-      <%= image_tag post.image.variant(resize: '200x200') %>
-      <%= link_to("詳細を見る", "/posts/#{post.id}") %>
-    </li>
+    <div class="container border border-dark mx-auto mt-5 p-5">
+      <div class="d-inline-block m-3">
+        <%= image_tag post.image.variant(resize: '200x200') %>
+      </div>
+      
+      <div class="d-inline-block m-3">
+        <h1><%= post.book_title %></h1>
+        <%= link_to("詳細を見る", "/posts/#{post.id}") %>
+        
+      </div>
+
+    </div>
   <% end %>
-</ul>
