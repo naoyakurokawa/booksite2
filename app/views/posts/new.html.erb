@@ -1,17 +1,21 @@
-<h1>Add Post</h1>
-
 <%= form_with model: @post, local: true do |form| %>
-  <div>
-    <%= form.label :book_title %>
-    <%= form.text_field :book_title %>
+<div class="container border border-dark mx-auto mt-5 p-5">
+  <div class = "m-3">
+    <%= form.label :"本のタイトル" %> <br>
+    <%= form.text_field :book_title, :size => "40x10" %>
+  </div>
+  <div class = "m-3">
+    <%= form.label :"記事本文" %> <br>
+    <%= form.text_area :article_body, :size => "40x10" %>
   </div>
 
-  <div>
-    <%= form.label :image %>
+  <div class = "m-3">
+    <%= form.label :"本の画像" %> <br>
     <%= form.file_field :image %>
   </div>
 
-  <div>
+  <div class = "m-3">
     <%= form.submit %>
   </div>
+</div>
 <% end %>

@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.fetch(:post, {}).permit(:book_title, :image)
+    params.fetch(:post, {}).permit(:book_title, :article_body, :image)
   end
   
 end
