@@ -1,0 +1,17 @@
+<h1>Add Post</h1>
+
+<%= form_with model: @post, local: true do |form| %>
+  <div>
+    <%= form.label :book_title %>
+    <%= form.text_field :book_title %>
+  </div>
+
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
