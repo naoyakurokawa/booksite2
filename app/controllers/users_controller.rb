@@ -15,15 +15,15 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to root_url, notice: 'Add User'
+      redirect_to("/users/index")
     else
       render :new
     end
   end
 
-  private
+private
   def user_params
     params.fetch(:user, {}).permit(:name, :avatar)
   end
-  
+
 end
