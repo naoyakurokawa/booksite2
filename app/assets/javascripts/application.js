@@ -14,3 +14,20 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+(function() {
+  'use strict';
+
+  var article = document.getElementById('article');
+  var label   = document.getElementById('label');
+
+  var LIMIT = 140;
+
+  label.innerHTML = LIMIT;
+
+  article.addEventListener('keyup', function() {
+    var remaining = LIMIT - this.value.length;
+    label.innerHTML = remaining;
+  });
+
+})();
