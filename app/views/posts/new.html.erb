@@ -6,8 +6,8 @@
   </div>
   <div>
     <%= form.label :"記事本文" %> <br>
-    <div id="article">
-      <%= form.text_area :article_body, :size => "40x10" %>
+    <div>
+      <%= form.text_area :article_body, id:"article", :size => "40x10" %>
     </div>
     <p><span id = "label"></span>→残り文字数</p>
   </div>
